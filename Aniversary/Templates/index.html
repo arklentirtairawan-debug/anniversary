@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy 1st Anniversary ❤️</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Musik -->
+    <audio id="music" loop>
+        <source src="{{ url_for('static', filename='music.mp3') }}" type="audio/mpeg">
+    </audio>
+
+    <!-- Tombol musik -->
+    <button class="music-button" onclick="toggleMusic()">🎵</button>
+
+    <!-- Floating Hearts -->
+    <div class="hearts"></div>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">For My Favorite Person ❤️</p>
+
+            <h1>
+                Happy
+                <span>1st Anniversary</span>
+            </h1>
+
+            <p class="subtitle">
+                Satu tahun, seribu cerita,<br>
+                dan masih ingin selamanya bersama kamu.
+            </p>
+
+            <button class="main-button" onclick="scrollToMemories()">
+                Buka Kenangan ❤️
+            </button>
+
+        </div>
+
+        <div class="scroll">
+            ↓ scroll perlahan ↓
+        </div>
+
+    </section>
+
+
+    <!-- ================= GALERI ================= -->
+
+    <section class="gallery-section" id="memories">
+
+        <p class="section-label">Our Memories</p>
+
+        <h2>
+            Kenangan yang
+            <span>tidak akan terlupakan</span>
+        </h2>
+
+        <p class="description">
+            setiap momen bersamamu reta, menjadi kenangan yang
+            selalu ingin aku simpan di hati. haha liat aja deh itu 
+            beberapa foto yang kita ambil bareng.
+            
+            
+        
+        </p>
+
+        <div class="gallery">
+
+            <div class="photo-card">
+                <img src="{{ url_for('static', filename='images/foto1.jpg') }}"
+                     alt="Kenangan pertama">
+                <div class="photo-text">
+                    <h3>First Memory ❤️</h3>
+                    <p>wkwkwk awal awal pacaran ye.</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="{{ url_for('static', filename='images/foto2.jpg') }}"
+                     alt="Kenangan kedua">
+                <div class="photo-text">
+                    <h3>Our Kepantai yuk 🌷</h3>
+                    <p>Senengg bangett bisaa kepantai bareng kamuu.</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="{{ url_for('static', filename='images/foto3.jpg') }}"
+                     alt="Kenangan ketiga">
+                <div class="photo-text">
+                    <h3>With You 💕</h3>
+                    <p>liat apaa ayyy.</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="{{ url_for('static', filename='images/foto4.jpg') }}"
+                     alt="Kenangan keempat">
+                <div class="photo-text">
+                    <h3>Still Us 🌹</h3>
+                    <p>joging lagi yuk.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SURAT ================= -->
+
+    <section class="letter-section">
+
+        <p class="section-label">A Little Letter</p>
+
+        <h2>
+            Ada sesuatu untuk
+            <span>kamu 💌</span>
+        </h2>
+
+        <p class="description">
+            Klik ayy amplop di bawah untuk membuka suratnya.
+        </p>
+
+
+        <div class="envelope-wrapper" onclick="openLetter()">
+
+            <div class="envelope" id="envelope">
+
+                <div class="flap"></div>
+
+                <div class="letter">
+
+                    <div class="letter-content">
+
+                        <h3>Untuk Kamu ❤️</h3>
+
+                        <p>
+                            Happy 1st Anniversary, sayang.
+                        </p>
+
+                        <p>
+                            Terima kasih udah menjadi bagian paling
+                            indah dalam satu tahun terakhir ini sayaangg,
+                            makasih untuk semua tawa, cerita,
+                            perhatian, dan setiap waktu yang kamu
+                            luangkan untuk kita.
+                        </p>
+
+                        <p>
+                            kamu tau ayyy aku bikinn ini semaleman wkwkw.
+                            tapi gapapa deh sekali kali buat kamuu sekaligus
+                            aku belajar juga hhe.
+                            makasih buat semuanya yaa sayaangg,
+                            aku pengen kamu tau satu hal:
+                        </p>
+
+                        <p class="highlight">
+                            i love you more than anything in this world,
+                            i will always be here for you darl.
+                        </p>
+
+                        <p>
+                            Hari ini, besok, dan semoga sampai
+                            tahun-tahun berikutnya.
+                        </p>
+
+                        <p>
+                            Semoga kita selalu punya alasan untuk
+                            tersenyum bersama, saling menjaga,
+                            dan menciptakan lebih banyak kenangan.
+                        </p>
+
+                        <p>
+                            I LOVEEE YOUUUU AND HAPPY 1ST ANNIVERSARY MY LOVE
+                            ❤️
+                        </p>
+
+                        <p class="signature">
+                            With all my love,<br>
+                            <strong>Someone who loves you ❤️</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="heart-seal">
+                    ❤️
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="click-hint" id="clickHint">
+            💌 Klik amplop untuk membuka
+        </p>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-heart">
+            ❤️
+        </div>
+
+        <h2>
+            One Year Down,
+            Forever To Go.
+        </h2>
+
+        <p>
+            Happy 1st Anniversary, my love.
+        </p>
+
+        <small>
+            Made with ❤️ just for you
+        </small>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
